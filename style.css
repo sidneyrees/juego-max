@@ -1,10 +1,17 @@
+html {
+  height: 100%;
+  overscroll-behavior: none;
+}
+
 body {
   font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
   background: linear-gradient(to bottom, #87CEEB, #c2f0c2);
   text-align: center;
   margin: 0;
   padding: 20px;
+  min-height: 100%;
   touch-action: none;
+  overscroll-behavior: none;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -62,12 +69,21 @@ h1 {
   font-size: 18px;
   font-weight: bold;
   color: #1b3a5c;
+  white-space: nowrap;
 }
 
 .congelado {
   font-size: 18px;
   font-weight: bold;
   color: #0d47a1;
+  white-space: nowrap;
+}
+
+#tiempo, #segundosCongelado {
+  display: inline-block;
+  min-width: 3ch;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
 }
 
 #contenedorJuego {
@@ -138,6 +154,7 @@ canvas {
   border: 3px solid #1b3a5c;
   border-radius: 14px;
   cursor: pointer;
+  touch-action: none;
 }
 
 .botonControl:active {
@@ -152,5 +169,39 @@ canvas {
 @media (min-width: 700px) {
   #controlesMovil {
     display: none;
+  }
+}
+
+@media (max-width: 699px) {
+  body {
+    padding: 10px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .tag {
+    font-size: 14px;
+  }
+
+  #hud {
+    gap: 14px;
+    margin: 10px auto;
+  }
+
+  .fondoBarra {
+    width: 130px;
+  }
+
+  .instrucciones {
+    font-size: 13px;
+    margin: 8px auto;
+    max-width: 320px;
+  }
+
+  #controlesMovil {
+    margin: 10px auto 0;
   }
 }
