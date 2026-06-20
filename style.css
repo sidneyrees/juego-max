@@ -1,0 +1,156 @@
+body {
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  background: linear-gradient(to bottom, #87CEEB, #c2f0c2);
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+h1 {
+  color: #1b3a5c;
+  margin-bottom: 0;
+}
+
+.tag {
+  margin-top: 4px;
+  color: #555;
+  font-style: italic;
+}
+
+#hud {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 15px auto;
+  flex-wrap: wrap;
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fondoBarra {
+  width: 200px;
+  height: 20px;
+  background: #ddd;
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.rellenoBarra {
+  height: 100%;
+  width: 100%;
+  transition: width 0.2s linear;
+}
+
+.rellenoHambre {
+  background: #ff7043;
+}
+
+.rellenoSed {
+  background: #29b6f6;
+}
+
+.puntaje {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1b3a5c;
+}
+
+.congelado {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+#contenedorJuego {
+  position: relative;
+  display: inline-block;
+}
+
+canvas {
+  background: #9ccc65;
+  border: 4px solid #1b3a5c;
+  border-radius: 10px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  touch-action: none;
+}
+
+#pantallaFin {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#pantallaFin.oculto {
+  display: none;
+}
+
+#botonReiniciar {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: inherit;
+  background: #ffca28;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#botonReiniciar:hover {
+  background: #ffb300;
+}
+
+.instrucciones {
+  margin-top: 15px;
+  color: #1b3a5c;
+}
+
+#controlesMovil {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  margin: 20px auto 0;
+}
+
+.botonControl {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
+  background: #ffffffcc;
+  border: 3px solid #1b3a5c;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.botonControl:active {
+  background: #ffca28;
+}
+
+.pos-arriba { top: 0; left: 65px; }
+.pos-abajo { top: 130px; left: 65px; }
+.pos-izquierda { top: 65px; left: 0; }
+.pos-derecha { top: 65px; left: 130px; }
+
+@media (min-width: 700px) {
+  #controlesMovil {
+    display: none;
+  }
+}

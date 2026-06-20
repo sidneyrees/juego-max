@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Countryball Revelión</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1b3a5c">
+  <link rel="icon" href="icono-192.png">
+  <link rel="apple-touch-icon" href="icono-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+
+  <h1>🇦🇷 Countryball Revelión 🇦🇷</h1>
+  <p class="tag">el mejor countryball de la historia</p>
+
+  <div id="hud">
+    <div class="barra">
+      <span>🍎 Hambre</span>
+      <div class="fondoBarra"><div id="barraHambre" class="rellenoBarra rellenoHambre"></div></div>
+    </div>
+    <div class="barra">
+      <span>💧 Sed</span>
+      <div class="fondoBarra"><div id="barraSed" class="rellenoBarra rellenoSed"></div></div>
+    </div>
+    <div class="puntaje">⏱️ Sobreviviste: <span id="tiempo">0</span> s</div>
+    <div id="estadoCongelado" class="congelado oculto">🥶 ¡Congelado! Te quedan <span id="segundosCongelado">5</span>s</div>
+  </div>
+
+  <div id="contenedorJuego">
+    <canvas id="lienzo" width="800" height="500"></canvas>
+    <div id="pantallaFin" class="oculto">
+      <h2>💀 Tu countryball murió 💀</h2>
+      <p id="motivoMuerte"></p>
+      <p>Sobreviviste <span id="tiempoFinal">0</span> segundos</p>
+      <button id="botonReiniciar">Jugar de nuevo</button>
+    </div>
+  </div>
+
+  <p class="instrucciones">Usá las flechas (⬆️⬇️⬅️➡️) o los botones de abajo para mover tu countryball y agarrar la comida y la bebida.</p>
+
+  <div id="controlesMovil">
+    <button id="btnArriba" class="botonControl pos-arriba">⬆️</button>
+    <button id="btnIzquierda" class="botonControl pos-izquierda">⬅️</button>
+    <button id="btnAbajo" class="botonControl pos-abajo">⬇️</button>
+    <button id="btnDerecha" class="botonControl pos-derecha">➡️</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
